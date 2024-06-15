@@ -3,7 +3,6 @@ package org.documents.controller;
 import io.quarkus.logging.Log;
 import jakarta.ws.rs.Produces;
 
-import jakarta.inject.Inject;
 import jakarta.ws.rs.Consumes;
 import org.documents.dtos.GenericAnswer;
 import org.documents.service.DocumentService;
@@ -21,8 +20,11 @@ import java.io.InputStream;
 @RequestMapping("api/documents")
 public class DocumentController {
 
-    @Inject
-    private DocumentService documentService;
+
+    private final DocumentService documentService;
+    public DocumentController(DocumentService documentService) {
+        this.documentService = documentService;
+    }
 
     @PostMapping("excelToMysql/{cve}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -30,7 +32,7 @@ public class DocumentController {
     public GenericAnswer fileUpload(@PartFilename("file")
                                     @PartType(MediaType.APPLICATION_OCTET_STREAM)InputStream file, @PathVariable String cve) {
         Log.debug("Starting fileUpload to convert to util data");
-        GenericAnswer answer = documentService.fileUpLoad(file, cve);
+        GenericAnswer answer = this.documentService.fileUpLoad(file, cve);
 
         Log.debug("Ending excelToMysql");
         return answer;

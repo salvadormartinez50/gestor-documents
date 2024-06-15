@@ -9,7 +9,6 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.documents.dtos.GenericAnswer;
-import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 import org.springframework.stereotype.Service;
 
@@ -23,7 +22,6 @@ import static io.smallrye.config._private.ConfigLogging.log;
 
 @Service
 public class DocumentServiceImpl implements DocumentService {
-
 
     public GenericAnswer fileUpLoad(InputStream file, String cve) {
         log.infof("cve {}" , cve);
@@ -54,7 +52,7 @@ public class DocumentServiceImpl implements DocumentService {
         String str = merchants.toString();
         Log.info("merchants " + merchants);
         Log.info("str " + str);
-        return new GenericAnswer("200", "Success");
+        return new GenericAnswer("200", "success");
     }
 
 

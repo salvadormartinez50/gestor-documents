@@ -7,6 +7,6 @@ import lombok.Setter;
 @Getter
 public class Message {
     private String code;
-    private String messageInCode;
+    private String messages;
 
 }

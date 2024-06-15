@@ -1,19 +1,20 @@
 package org.documents.dtos;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
 import java.io.Serializable;
 
-@JsonAutoDetect(
-        fieldVisibility = JsonAutoDetect.Visibility.ANY
-)
+import lombok.Getter;
+import lombok.Setter;
 
+@Setter
+@Getter
 public class GenericAnswer implements Serializable {
     private static final long serialVersionUID = 0L;
-    private transient Message message = new Message();
+    private final String code;
+    private String  message;
 
-    public GenericAnswer(String pCode, String pMessage) {
-        this.message.setCode(pCode);
-        this.message.setMessageInCode(pMessage);
+    public GenericAnswer(String code, String message) {
+        this.code = code;
+        this.message = message;
     }
 }
