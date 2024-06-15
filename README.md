@@ -2,7 +2,8 @@
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
-And extracts information from documents such as an Excel file to use this information according to the needs of the project.
+And extracts information from documents such as an Excel file to use this information according to the needs of the project,
+for example in a SQL structure.
 
 
 
