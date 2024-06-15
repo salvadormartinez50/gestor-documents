@@ -2,7 +2,9 @@
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
-If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
+And extracts information from documents such as an Excel file to use this information according to the needs of the project.
+
+
 
 ## Running the application in dev mode
 
