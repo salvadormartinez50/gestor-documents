@@ -30,7 +30,7 @@ public class DocumentController {
     @Consumes(MediaType.APPLICATION_OCTET_STREAM)
     public GenericAnswer fileUpload(@PartFilename("file")
                                     @PartType(MediaType.APPLICATION_OCTET_STREAM)InputStream file, @PathVariable String cve) {
-        Log.debug("Starting fileUpload to convert to util data");
+        Log.debug("Starting fileUpload to convert to util data from the first column of an excel file");
         GenericAnswer answer = this.documentService.fileUpLoad(file, cve);
 
         Log.debug("Ending excelToMysql");
