@@ -24,7 +24,7 @@ import static io.smallrye.config._private.ConfigLogging.log;
 public class DocumentServiceImpl implements DocumentService {
 
     public GenericAnswer fileUpLoad(InputStream file, String cve) {
-        log.infof("cve {}" , cve);
+        log.info("user " + cve);
         StringBuilder merchants = new StringBuilder();
         merchants.append("'");
         try {

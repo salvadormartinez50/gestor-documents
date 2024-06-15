@@ -20,7 +20,6 @@ import java.io.InputStream;
 @RequestMapping("api/documents")
 public class DocumentController {
 
-
     private final DocumentService documentService;
     public DocumentController(DocumentService documentService) {
         this.documentService = documentService;

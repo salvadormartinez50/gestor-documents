@@ -1,0 +1,48 @@
+{
+	"info": {
+		"_postman_id": "800470ba-0b3b-453c-9bbd-4f4581f3c614",
+		"name": "UploadDoc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13861996",
+		"_collection_link": "https://icceelectronica.postman.co/workspace/becd80b0-b322-4815-8166-0a74bb7718c1/collection/13861996-800470ba-0b3b-453c-9bbd-4f4581f3c614?action=share&source=collection_link&creator=13861996"
+	},
+	"item": [
+		{
+			"name": "CargarArchivoExcel",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": " application/octet-stream"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "/C:/Main_2022/Github-project/TyC2.xlsx"
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/documents/excelToMysql/Chava",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"documents",
+						"excelToMysql",
+						"Chava"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
