@@ -1,6 +1,5 @@
 package org.documents.service.impl;
 
-
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -54,8 +53,5 @@ public class DocumentServiceImpl implements DocumentService {
         Log.info("str " + str);
         return new GenericAnswer("200", "success");
     }
-
-
-
 
 }
